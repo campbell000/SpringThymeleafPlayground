@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thymeleaf 3 + Spring 4 example</title>
+    <meta charset="utf-8" />
+    <script th:inline="javascript">
+        var contextRoot = /*[[@{/}]]*/ '';
+        if (contextRoot == "/")
+            contextRoot = "";
+    </script>
+    <script th:src="@{/webjars/jquery/jquery.js}"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <script th:src="@{/js/index.js}" ></script>
+
+</head>
+<body>
+    <button type="button" onclick="doIt()">
+        Ajax Call
+    </button>
+</body>
+</html>
