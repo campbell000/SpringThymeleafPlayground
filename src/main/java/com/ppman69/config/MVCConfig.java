@@ -24,29 +24,4 @@ public class MVCConfig extends WebMvcConfigurerAdapter implements ApplicationCon
         this.applicationContext = applicationContext;
     }
 
-    @Bean
-    public ViewResolver viewResolver() {
-        ThymeleafViewResolver resolver = new ThymeleafViewResolver();
-        resolver.setTemplateEngine(templateEngine());
-        resolver.setCharacterEncoding("UTF-8");
-        return resolver;
-    }
-
-    @Bean
-    public SpringTemplateEngine templateEngine() {
-        SpringTemplateEngine engine = new SpringTemplateEngine();
-        engine.setEnableSpringELCompiler(true);
-        engine.setTemplateResolver(templateResolver());
-        return engine;
-    }
-
-    private SpringResourceTemplateResolver templateResolver() {
-        SpringResourceTemplateResolver resolver = new SpringResourceTemplateResolver();
-        resolver.setApplicationContext(applicationContext);
-        resolver.setPrefix("WEB-INF/views/");
-        resolver.setSuffix(".html");
-        resolver.setTemplateMode(TemplateMode.HTML);
-        resolver.setCacheable(true);
-        return resolver;
-    }
 }
