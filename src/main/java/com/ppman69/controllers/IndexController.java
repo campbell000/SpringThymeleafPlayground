@@ -1,7 +1,7 @@
 package com.ppman69.controllers;
 
 import com.lowagie.text.DocumentException;
-import com.ppman69.services.PDFGenerator;
+import com.ppman69.services.SpringBootTemplatePDFGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,7 +20,7 @@ import java.io.IOException;
 public class IndexController {
 
     @Autowired
-    PDFGenerator generator;
+    SpringBootTemplatePDFGenerator generator;
 
     @RequestMapping(method = RequestMethod.GET)
     public String index(Model model) {

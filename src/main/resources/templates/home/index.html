@@ -10,16 +10,24 @@
             contextRoot = "";
     </script>
     <script th:src="@{/webjars/jquery/jquery.js}"></script>
-    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
-    <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}" />
+    <link media="all" rel="stylesheet" th:href="@{/css/index.css}" href="/css/index.css" />
     <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
     <script th:src="@{/js/index.js}" ></script>
 
 </head>
-<body>
+<body class="container">
     <button type="button" onclick="doIt()">
         Ajax Call
     </button>
     <h1>Hello, <span th:text="${recipient}"></span></h1>
+    <div class="row">
+        <div class="col-xs-6 blue">
+            COL 1
+        </div>
+        <div  class="col-xs-6 red">
+            COL2
+        </div>
+        <img width="300" height="400" th:src="@{/images/dedede.jpg}"/>
+    </div>
 </body>
 </html>
