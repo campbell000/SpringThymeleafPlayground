@@ -11,12 +11,13 @@
 
 .blue
 {
-    background-color: blue;
+    background-color: blue !important;
 }
 
 .red
 {
     background-color: red;
+    color: yellow !important;
 }
 
 body

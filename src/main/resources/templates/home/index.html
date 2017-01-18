@@ -9,24 +9,30 @@
         if (contextRoot == "/")
             contextRoot = "";
     </script>
+    <script>
+
+    </script>
+    <link media="all" rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.css}" href="/webjars/bootstrap/css/bootstrap.css"/>
     <script th:src="@{/webjars/jquery/jquery.js}"></script>
     <link media="all" rel="stylesheet" th:href="@{/css/index.css}" href="/css/index.css" />
     <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
     <script th:src="@{/js/index.js}" ></script>
 
 </head>
-<body class="container">
+<body>
     <button type="button" onclick="doIt()">
         Ajax Call
     </button>
     <h1>Hello, <span th:text="${recipient}"></span></h1>
     <div class="row">
-        <div class="col-xs-6 blue">
+        <div class="col-sm-6 blue">
             COL 1
         </div>
-        <div  class="col-xs-6 red">
+        <div class="col-sm-6 red">
             COL2
         </div>
+    </div>
+    <div class="row">
         <img width="300" height="400" th:src="@{/images/dedede.jpg}"/>
     </div>
 </body>
